@@ -33,7 +33,8 @@ GROUP BY CategoryID;
 -- Question 8
 SELECT SupplierID, COUNT(*)
 FROM products
-HAVING COUNT(*) <= 5;
+GROUP BY SupplierID
+HAVING COUNT(*) >= 5;
 
 -- Question 9
 SELECT ProductID, ProductName, (UnitPrice * UnitsInStock) AS InventoryValue
